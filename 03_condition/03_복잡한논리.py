@@ -12,4 +12,5 @@ teen = 14 <= age and age <= 19 # 원칙적인 표현
 print("청소년인가?", teen)
 
 free = age <= 7 or age >= 65
+# free = not (age >= 8 and age < 65)
 print("무임승차 대상인가?", free)
