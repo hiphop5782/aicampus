@@ -48,7 +48,7 @@ print("컴퓨터가 1~1000 사이의 범위에서 정답을 생성하고 있습�
 com = random.randint(1, 1000)
 # com = random.randrange(1, 1001)
 print("정답 생성이 완료되었습니다")
-print("정답 : ", com)
+# print("정답 : ", com)
 
 for i in range(10): # 10번
     # 사용자 입력 (반복적으로)
