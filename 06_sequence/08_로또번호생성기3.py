@@ -35,7 +35,9 @@ numbers = list(range(1,46))
 for i in range(5):
     # shuffle
     random.shuffle(numbers)
-    print(numbers[:6])
+    lotto = numbers[:6]
+    lotto.sort()
+    print(lotto)
 
 
 
