@@ -31,12 +31,27 @@ def average_pass(score_list, cutoff=60):
             count += 1
     return total / count #평균을 구해서 반환
 
+# -----------------------
+# 로또 생성 함수
+# -----------------------
+import random
+def lotto():
+    numbers = list(range(1,46)) # 1~45
+    # choice = random.sample(numbers, 6)
+    random.shuffle(numbers)
+    choice = numbers[:6]
+
+    choice.sort()
+    return choice
+
 # main 코드
 scores = [75, 62, 53, 47, 88, 82, 60, 55, 55, 95]
 print("합격 인원 수", count_pass(scores))
 print("합격 인원 수", count_pass(scores, 70))
 print("합격자 평균", average_pass(scores))
 print("합격자 평균", average_pass(scores, 70))
+
+print("로또", lotto())
 
 # 파이썬에서 제공하는 기본 함수
 print(sum(scores))
