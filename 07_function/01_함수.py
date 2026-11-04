@@ -30,6 +30,9 @@ def add(left, right):
 add(1, 2) #add라는 함수에 1, 2를 전달하며 실행
 add(10, 20) #add라는 함수에 10, 20을 전달하며 실행
 add(left=100, right=200)
+add(right=500, left=200)
+# add(100, right=200) # 가능하긴 함
+# add(200, left=100) # 안됨
 
 
 

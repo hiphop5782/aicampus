@@ -25,7 +25,9 @@
 이 함수를 구현하기 위해 필요한 값들을 함수에 변수로 선언한 뒤 처리해보세요
 """
 
-def show_price(rice, fried, sundae):
+# def show_price(rice, fried, sundae): # 기본값 미지정 (반드시 형태를 맞춰 호출)
+# def show_price(rice=0, fried=0, sundae=0): # 기본값 지정 (일부 항목이 누락될 수 있음)
+def show_price(rice=0, fried=0, sundae=0):
     # 이 함수에서만 사용할 변수를 얼마든지 만들 수 있다
     # 지역 변수(local variable)
     rice_total = rice * 3000
@@ -43,9 +45,17 @@ def show_price(rice, fried, sundae):
     print(f"--------------------")
     print(f"총 {total}원")
 
+# ------------------------------------
+# 메인 프로그램
+# ------------------------------------
 show_price(2, 1, 1)
 print()
-show_price(1, 0, 0)
+# 떡볶이 1인분, 튀김 0인분, 순대 0인분?
+# show_price(1, 0, 0)
+
+# 떡볶이 1인분만으로 호출이 가능할까?
+show_price(rice=1)
+show_price(fried=1)
 
 
 
