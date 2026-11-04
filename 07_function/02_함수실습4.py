@@ -26,6 +26,8 @@ def calc_time(
     in_time = in_hour * 60 + in_minute
     out_time = out_hour * 60 + out_minute
     time = out_time - in_time
+    if time < 0:
+        return
     hour = time // 60
     minute = time % 60
     print(f"시작 시각 : {in_hour}시 {in_minute}분")
@@ -39,7 +41,7 @@ calc_time(
 )
 print()
 calc_time(
-    9, 30,
+    19, 30,
     18, 30
 )
 
