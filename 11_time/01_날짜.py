@@ -63,8 +63,17 @@ print(today.isoweekday()) # 월(1), 화(2), ..., 토(6), 일(7)
 weekdays = "월화수목금토일"
 print(weekdays[today.weekday()])
 
-# 파이썬에서 제공하는 변환명령
+# 파이썬에서 제공하는 변환명령 (언어설정을 따름)
+import locale
+locale.setlocale(locale.LC_TIME, "Korean_Korea.949")
 print(today.strftime("%A"))
 print(today.strftime("%a"))
+
+# 각종 형식들을 활용해서 원하는 형태로 출력
+# - (주의) %m은 무조건 2자리가 나옴, (윈도우) %#m , (리눅스) %-m
+# - %d등 대부분의 기능이 비슷함
+print(today.strftime("%Y년 %#m월 %#d일 %A %p %#I시 %#M분 %#S초"))
+print(today.strftime("%Y년 %#m월 %#d일 %A %#H시 %#M분 %#S초"))
+
 
 
