@@ -47,9 +47,9 @@ while True:
     print(f"[{name}] 투표가 완료되었습니다. 현재 {votes[name]}표")
 
 print("투표를 종료합니다")
-print(votes)
-
-
+# print(votes)
+for name, count in votes.items():
+    print(f"[{name}] {count}표")
 
 
 
